@@ -1,0 +1,218 @@
+@charset "UTF-8";
+/* Définition des couleurs */
+/* Fin définition des couleurs */
+/* Définition shadow */
+/* Fin définition shadow */
+/* Définition des polices personnalisées */
+@font-face {
+  font-family: "shrikhand";
+  src: url("./polices/shrikhand/Shrikhand-Regular.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "roboto";
+  src: url("./polices/roboto/Roboto-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+/* Fin des polices personnalisées */
+/* Eléments principaux du site */
+body {
+  font-family: "roboto";
+  margin: auto;
+}
+body main {
+  max-width: 1024px;
+  margin: auto;
+}
+body .header__Logo h1 {
+  font-family: "shrikhand";
+}
+body .footer__Titre h1 {
+  font-family: "shrikhand";
+  font-weight: normal;
+}
+body .footer {
+  max-width: 2560px;
+}
+
+/* Fin éléments principaux du site */
+/* Header */
+.header__Logo h1 {
+  font-size: 3rem;
+}
+.header .form__Result {
+  display: flex;
+  flex-direction: column;
+  background: #f2f2f2;
+  border-radius: 20px;
+  padding: 0px 0px 40px 0px;
+}
+.header .form__Result .result__Icon {
+  background: #d6d6d6;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  border-radius: 20px 20px 0px 0px;
+  border-top: 5px solid #bebebe;
+  padding-left: 20px;
+}
+.header .form__Result .result__Icon .result__Search {
+  border-style: none;
+  background: #d6d6d6;
+  font-weight: bold;
+  margin-left: 20px;
+  font-size: 1rem;
+}
+.header .form__Result .form__H2 {
+  padding-left: 20px;
+}
+.header .form__Result .form__H2 h3 {
+  color: #9a9a9a;
+  font-weight: normal;
+}
+.header .form__Result .form__Button {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.header .form__Result .form__Button .button__Btn {
+  width: 300px;
+  height: 50px;
+  cursor: pointer;
+  border-style: none;
+  background: -webkit-linear-gradient(280deg, #FF79DA, #9356DC);
+  box-shadow: 10px 10px 10px #cccccc;
+  border-radius: 30px;
+  color: white;
+  font-size: 1.2rem;
+  transition: transform 450ms, background 300ms 150ms;
+}
+.header .form__Result .form__Button .button__Btn:hover {
+  background: -webkit-linear-gradient(280deg, #f587d5, #9963d1);
+  transform: scale(1.01);
+}
+
+/* Fin header */
+/* Section Nav */
+.sectionNav__Ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-left: 0px;
+}
+.sectionNav__Ul li {
+  box-shadow: 2px 2px 10px #cccccc;
+  border-radius: 20px;
+  height: 50px;
+  background: #f2f2f2;
+  display: flex;
+  align-items: center;
+  width: 220px;
+  margin: 10px 15px 10px 15px;
+}
+.sectionNav__Ul li a {
+  text-decoration: none;
+}
+.sectionNav__Ul li a .a__Decimal {
+  background: #9356DC;
+  border-radius: 30px;
+  color: white;
+  position: relative;
+  right: 12px;
+  padding: 5px 9px 5px 9px;
+  font-size: 0.8rem;
+}
+.sectionNav__Ul li a .a__Description {
+  font-weight: bold;
+  color: black;
+  font-size: 0.8rem;
+  text-align: center;
+  padding-left: 10px;
+}
+.sectionNav__Ul li a .a__Icone i {
+  color: #9a9a9a;
+}
+
+/* Fin section Nav */
+/* Section Restaurant */
+.sectionRestaurant {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.sectionRestaurant__H2 {
+  width: 98%;
+}
+.sectionRestaurant__Carte {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  box-shadow: 2px 2px 10px #cccccc;
+  border-radius: 20px;
+  width: 22%;
+  margin: 0px 10px 0px 10px;
+}
+.sectionRestaurant__Carte a {
+  text-decoration: none;
+}
+.sectionRestaurant__Description {
+  color: black;
+}
+.sectionRestaurant__Description p {
+  display: flex;
+  justify-content: space-between;
+}
+.sectionRestaurant__Description p .coeur__End {
+  display: none;
+}
+.sectionRestaurant__Description p .coeur__Start:hover {
+  display: none;
+}
+.sectionRestaurant__Image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px 15px 0px 0px;
+}
+
+/* Fin section Restaurant */
+/* Footer */
+.footer {
+  background: #4b4b4b;
+  min-height: 120px;
+  color: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 20px;
+}
+.footer__width {
+  margin: auto;
+  max-width: 1024px;
+  width: 100%;
+  justify-content: flex-start;
+}
+.footer__Titre {
+  font-size: 0.8rem;
+}
+.footer__Ul ul {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 0px;
+}
+.footer__Ul a {
+  text-decoration: none;
+  color: #f2f2f2;
+}
+
+/* Fin footer */
+
+/*# sourceMappingURL=style.css.map */

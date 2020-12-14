@@ -1,0 +1,210 @@
+/* Définition des polices personnalisées */
+@font-face{
+  font-family: "shrikhand";
+  src: url("./polices/shrikhand/Shrikhand-Regular.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face{
+  font-family: "roboto";
+  src: url("./polices/roboto/Roboto-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+/* Fin des polices personnalisées */
+/* Eléments principaux du site */
+body{
+  font-family: "roboto";
+  margin: auto;
+    main{
+      max-width: 1024px;
+      margin: auto;
+    }
+    .header__Logo h1{
+      font-family: "shrikhand";
+    }
+    .footer__Titre h1{
+      font-family: "shrikhand";
+      font-weight: normal;
+    }
+    .footer{
+      max-width: 2560px;
+    }
+}
+/* Fin éléments principaux du site */ 
+/* Header */ 
+.header{
+  &__Logo h1{
+    font-size: 3rem;
+  }
+  .form__Result{
+    display: flex;
+    flex-direction: column;
+    background: $colour-background;
+    border-radius: 20px;
+    padding: 0px 0px 40px 0px;
+      .result__Icon{
+        background: $colour-background-dark;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        border-radius: 20px 20px 0px 0px;
+        border-top: 5px solid $colour-background-dark-dark;
+        padding-left: 20px;
+          .result__Search{
+            border-style: none;
+            background: $colour-background-dark;
+            font-weight: bold;
+            margin-left: 20px;
+            font-size: 1rem;
+          }
+      }
+      .form__H2{
+        padding-left: 20px;
+          h3{
+            color: $colour-icone;
+            font-weight: normal;
+          }
+      }
+      .form__Button{
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+          .button__Btn{
+            width: 300px;
+            height: 50px;
+            cursor: pointer;
+            border-style: none;
+            background: $colour-background-start;
+            @include btnShadowRadius;
+            color: white;            
+            font-size: 1.2rem;
+            transition: transform 450ms, background 300ms 150ms;
+            &:hover{
+              background: $colour-background-end;
+              transform: scale(1.01);
+            }
+          }
+      }    
+  }
+}
+  
+/* Fin header */ 
+/* Section Nav */ 
+.sectionNav{
+  &__Ul{
+    list-style-type:none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-left: 0px;
+      li{
+        @include carteShadowRadius;
+        height: 50px;
+        background: $colour-background;
+        display: flex;
+        align-items: center;
+        width: 220px;
+        margin: 10px 15px 10px 15px;
+          a{
+            text-decoration: none;
+              .a__Decimal{
+                background: $colour-primary;
+                border-radius: 30px;
+                color: white;
+                position: relative;
+                right: 12px;
+                padding: 5px 9px 5px 9px;
+                font-size: 0.8rem;
+              }
+              .a__Description{
+                font-weight: bold;
+                color: black;
+                font-size: 0.8rem;
+                text-align: center;
+                padding-left: 10px;
+              }
+              .a__Icone i{
+                color: $colour-icone;
+              }
+          }   
+      }
+  }
+}
+/* Fin section Nav */ 
+/* Section Restaurant */ 
+.sectionRestaurant{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+    &__H2{
+      width: 98%;
+    }
+    &__Carte{
+      display: flex;
+      flex-direction: column;
+      padding: 5px;
+      @include carteShadowRadius;
+      width: 22%;
+      margin: 0px 10px 0px 10px;
+    }
+    &__Carte a{
+      text-decoration: none;
+    }
+    &__Description{ 
+      color: black;         
+    }
+    &__Description p{
+      display: flex;
+      justify-content: space-between;
+        .coeur__End{
+          display: none;
+        }
+        .coeur__Start:hover{
+          display: none;
+        }    
+    }
+    &__Image img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 15px 15px 0px 0px;
+    }  
+}
+/* Fin section Restaurant */ 
+/* Footer */
+.footer{
+  background: $colour-background-footer;
+  min-height: 120px;
+  color: $colour-background;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 20px;
+    &__width{
+      margin: auto;
+      max-width: 1024px;
+      width: 100%;
+      justify-content: flex-start ;
+    }
+    &__Titre{
+      font-size: 0.8rem;
+    }
+    &__Ul ul{
+      display: flex;
+      list-style-type: none;
+      justify-content: space-between;
+      align-items: center;
+      padding-left: 0px;
+    }
+    &__Ul a{
+        text-decoration: none;
+        color: $colour-background;
+    }
+} 
+/* Fin footer */ 
+
