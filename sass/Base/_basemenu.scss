@@ -1,0 +1,58 @@
+/* Section mindMenu */ 
+.background{
+  height: 300px;
+}
+.background img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* Fin section mindMenu */ 
+/* section menu */ 
+.sectionMenu{
+  position: relative;
+  bottom: 30px;
+  background: $colour-background;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border-radius: 40px 40px 40px 40px;
+  padding: 20px;
+    &__h2{
+      width: 98%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+        h2{
+          font-family:"shrikhand";
+        }
+    }
+    &__article{
+      display: flex;
+      flex-direction: column;
+      width: 28%;
+      margin: 2%;
+        &__h3 h3{
+          font-weight: normal;
+        }
+        &__plat{
+          display: flex;
+          flex-direction: column;
+          margin: 2%;
+          padding: 10px;
+          background: white;
+          @include carteShadowRadius;
+            a{
+              text-decoration: none;
+              color: black;
+            }
+            &__h3{
+              font-size: 0.8rem;
+            }
+            &__description{
+              font-size: 0.8rem;
+            }
+        }
+    }
+}

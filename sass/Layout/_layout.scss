@@ -1,0 +1,63 @@
+/* Eléments principaux du site */
+body{
+  font-family: "roboto";
+  margin: auto;
+    main{
+      max-width: 1024px;
+      margin: auto;
+    }
+    .header__logo h1{
+      font-family: "shrikhand";
+    }
+    .footer__titre h1{
+      font-family: "shrikhand";
+      font-weight: normal;
+    }
+    .footer{
+      max-width: 2560px;
+    }
+}
+/* Fin éléments principaux du site */ 
+/* Header */ 
+.header{
+  display: flex;
+  align-items: center;
+    a{
+      padding-right: 20px;
+    }
+    &__logo h1{
+      font-size: 3rem;
+    }
+}
+/* Fin header */ 
+/* Footer */
+.footer{
+  background: $colour-background-footer;
+  min-height: 120px;
+  color: $colour-background;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 20px;
+    &__width{
+      margin: auto;
+      max-width: 1024px;
+      width: 100%;
+      justify-content: flex-start ;
+    }
+    &__titre{
+      font-size: 0.8rem;
+    }
+    &__ul ul{
+      display: flex;
+      list-style-type: none;
+      justify-content: space-between;
+      align-items: center;
+      padding-left: 0px;
+    }
+    &__ul a{
+        text-decoration: none;
+        color: $colour-background;
+    }
+} 
+/* Fin footer */ 

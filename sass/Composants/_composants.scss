@@ -1,0 +1,17 @@
+/* Bouton */
+.btn{
+  width: 300px;
+  height: 50px;
+  cursor: pointer;
+  border-style: none;
+  background: $colour-background-start; 
+  @include btnShadowRadius;
+  color: white;            
+  font-size: 1.2rem;
+  &:hover{
+    background: $colour-background-end;
+    transform: scale(1.01);
+    transition: transform 450ms, background 300ms 150ms;
+  }
+}
+/*Fin bouton */

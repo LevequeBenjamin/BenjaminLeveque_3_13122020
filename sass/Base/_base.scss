@@ -13,83 +13,42 @@
   font-style: normal;
 }
 /* Fin des polices personnalisées */
-/* Eléments principaux du site */
-body{
-  font-family: "roboto";
-  margin: auto;
-    main{
-      max-width: 1024px;
-      margin: auto;
+/* Section Mind */ 
+.form__result{
+  display: flex;
+  flex-direction: column;
+  background: $colour-background;
+  border-radius: 20px;
+  padding: 0px 0px 40px 0px;
+    &__icone{
+      background: $colour-background-dark;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      border-radius: 20px 20px 0px 0px;
+      border-top: 5px solid $colour-background-dark-dark;
+      padding-left: 20px;
+        &__search{
+          border-style: none;
+          background: $colour-background-dark;
+          font-weight: bold;
+          margin-left: 20px;
+          font-size: 1rem;
+        }
     }
-    .header__Logo h1{
-      font-family: "shrikhand";
+    &__h2{
+      padding-left: 20px;
+        h3{
+          color: $colour-icone;
+          font-weight: normal;
+        }
     }
-    .footer__Titre h1{
-      font-family: "shrikhand";
-      font-weight: normal;
+    &__button{
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
     }
-    .footer{
-      max-width: 2560px;
-    }
-}
-/* Fin éléments principaux du site */ 
-/* Header */ 
-.header{
-  &__Logo h1{
-    font-size: 3rem;
-  }
-  .form__Result{
-    display: flex;
-    flex-direction: column;
-    background: $colour-background;
-    border-radius: 20px;
-    padding: 0px 0px 40px 0px;
-      .result__Icon{
-        background: $colour-background-dark;
-        height: 50px;
-        display: flex;
-        align-items: center;
-        border-radius: 20px 20px 0px 0px;
-        border-top: 5px solid $colour-background-dark-dark;
-        padding-left: 20px;
-          .result__Search{
-            border-style: none;
-            background: $colour-background-dark;
-            font-weight: bold;
-            margin-left: 20px;
-            font-size: 1rem;
-          }
-      }
-      .form__H2{
-        padding-left: 20px;
-          h3{
-            color: $colour-icone;
-            font-weight: normal;
-          }
-      }
-      .form__Button{
-        display: flex;
-        justify-content: center;
-        margin-top: 20px;
-          .button__Btn{
-            width: 300px;
-            height: 50px;
-            cursor: pointer;
-            border-style: none;
-            background: $colour-background-start;
-            @include btnShadowRadius;
-            color: white;            
-            font-size: 1.2rem;
-            transition: transform 450ms, background 300ms 150ms;
-            &:hover{
-              background: $colour-background-end;
-              transform: scale(1.01);
-            }
-          }
-      }    
-  }
-}
-  
+} 
 /* Fin header */ 
 /* Section Nav */ 
 .sectionNav{
@@ -176,35 +135,4 @@ body{
     }  
 }
 /* Fin section Restaurant */ 
-/* Footer */
-.footer{
-  background: $colour-background-footer;
-  min-height: 120px;
-  color: $colour-background;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-top: 20px;
-    &__width{
-      margin: auto;
-      max-width: 1024px;
-      width: 100%;
-      justify-content: flex-start ;
-    }
-    &__Titre{
-      font-size: 0.8rem;
-    }
-    &__Ul ul{
-      display: flex;
-      list-style-type: none;
-      justify-content: space-between;
-      align-items: center;
-      padding-left: 0px;
-    }
-    &__Ul a{
-        text-decoration: none;
-        color: $colour-background;
-    }
-} 
-/* Fin footer */ 
 
