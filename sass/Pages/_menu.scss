@@ -11,7 +11,7 @@
 /* section menu */ 
 .sectionMenu{
   position: relative;
-  bottom: 30px;
+  bottom: 35px;
   background: $colour-background;
   display: flex;
   flex-wrap: wrap;
@@ -36,27 +36,31 @@
         &__h3 h3{
           font-weight: normal;
         }
-        &__plat{
-          
+        &__plat{       
           margin: 2%;
-          padding: 10px;
           background: white;
           @include carteShadowRadius;
+          height: 70px;
+          width: 270px;
             a{
               text-decoration: none;
               color: black;
               display: flex;
             }
+            &__wrap{
+              width: 100%;
+              padding-left: 10px;
+              padding-right: 10px;
+            }
             &__h3{
               font-size: 0.8rem;
+              width: 100%;
             }
             &__description{
               font-size: 0.8rem;
-              text-overflow: ellipsis;
-              overflow: hidden;
-              white-space: nowrap;
-            
-              
+              display: flex;
+              justify-content: space-between;  
+              width: 100%;         
             }
         }
         .coussin1{
@@ -73,9 +77,4 @@
         }
     }
 }
-.sectionMenu__article__plat__btn{
-  width: 100px;
-}
-.sectionMenu__article__plat__btn__check{
-  width: 100%;
-}
+

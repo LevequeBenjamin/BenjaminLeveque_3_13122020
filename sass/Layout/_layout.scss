@@ -28,6 +28,12 @@ body{
     &__logo h1{
       font-size: 3rem;
     }
+    i{
+      color: $colour-background-footer;
+    }
+    i:hover{
+      color: $colour-tertiary;
+    }
 }
 /* Fin header */ 
 /* Footer */

@@ -40,7 +40,7 @@ $courbe: cubic-bezier(0.39,0.575,0.28,0.995);
 @keyframes deplacement{
   from{
     opacity: 0;
-    transform: translateX(40px);
+    transform: translateX(60px);
   }
   to{
     opacity: 1;
@@ -48,3 +48,56 @@ $courbe: cubic-bezier(0.39,0.575,0.28,0.995);
   }
 }
 /* Fin définition déplacement check */
+/*Définition rotation check */
+@keyframes rotation{
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+/* Effet 3 petits points */
+.ellips{
+  text-overflow: ellipsis;
+              overflow: hidden;
+              white-space: nowrap;
+}
+/* Fin effet 3 petits points */ 
+.coeur__Start{
+  position: absolute;
+  right: 0px;
+  font-size: 1.2rem;
+}
+.coeur__Start:hover{
+  display: none;
+  z-index: -1;
+}
+.coeur__end{
+  color: white;
+  font-size: 1.2rem;
+}
+.coeur__end:hover{
+  color: $colour-secondary;
+  z-index: 1;
+  transition: 350ms;
+}
+
+.coeur__StartUn{
+  position: absolute;
+  right: 29px;
+  font-size: 1.4rem;
+}
+.coeur__StartUn:hover{
+  display: none;
+  z-index: -1;
+}
+.coeur__endDeux{
+  color: white;
+  font-size: 1.4rem;
+}
+.coeur__endDeux:hover{
+  color: $colour-secondary;
+  z-index: 1;
+  transition: 350ms;
+}

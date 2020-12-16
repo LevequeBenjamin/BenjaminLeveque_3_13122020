@@ -1,0 +1,64 @@
+
+
+/* Sur toutes les pages */ 
+/* Sur les écrans, quand la largeur de la fenêtre fait au maximum 910px/500px */
+@media all and (max-width: 1024px){
+  .footer{
+    position: relative;
+    bottom: 60px;
+  }
+}
+@media all and (max-width: 910px){
+  .footer{
+    padding: 0px 20px 0px 20px;
+    font-size: 0.8rem;
+}
+}
+@media all and (max-width: 500px){
+  .footer{
+    margin-top: 0px;
+      &__ul ul{
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: 1rem;
+      }
+  }
+}
+
+
+/* Sur toutes les pages menu */ 
+/* Sur les écrans, quand la largeur de la fenêtre fait au maximum 910px /450px */
+@media all and (max-width:1024px){
+  .sectionMenu{
+    border-radius: 40px 40px 0px 0px;
+    padding-bottom: 50px;
+    }
+}
+@media all and (max-width: 910px){
+  .sectionMenu{
+    flex-direction: column;
+    width: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    &__h2{
+      width: 90%;
+      padding: 0px 10px 0px 10px;
+    }
+      &__article{
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        margin-left: 0px;
+        margin-right: 0px;
+      }
+  }
+}
+@media all and (max-width: 450px){
+  .sectionMenu{
+    width: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}

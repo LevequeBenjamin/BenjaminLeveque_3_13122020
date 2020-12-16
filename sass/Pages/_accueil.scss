@@ -48,6 +48,9 @@
       text-decoration: none;
       :hover{
         background: $colour-secondary-veryclair;
+          .a__Icone i{
+            color: $colour-primary;
+          }
       }
       li{
         @include carteShadowRadius;
@@ -109,22 +112,6 @@
       display: flex;
       justify-content: space-between;
       position: relative;
-        .coeur__Start{
-          position: absolute;
-          right: 0px;
-        }
-        .coeur__Start:hover{
-          display: none;
-          z-index: -1;
-        }
-        .coeur__end{
-          color: white;
-        }
-        .coeur__end:hover{
-          color: $colour-secondary;
-          z-index: 1;
-          transition: 350ms;
-        }
     }
     &__Image img{
       width: 100%;

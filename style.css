@@ -33,7 +33,7 @@
 @keyframes deplacement {
   from {
     opacity: 0;
-    transform: translateX(40px);
+    transform: translateX(60px);
   }
   to {
     opacity: 1;
@@ -41,8 +41,69 @@
   }
 }
 /* Fin définition déplacement check */
+/*Définition rotation check */
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* Effet 3 petits points */
+.ellips {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/* Fin effet 3 petits points */
+.coeur__Start {
+  position: absolute;
+  right: 0px;
+  font-size: 1.2rem;
+}
+
+.coeur__Start:hover {
+  display: none;
+  z-index: -1;
+}
+
+.coeur__end {
+  color: white;
+  font-size: 1.2rem;
+}
+
+.coeur__end:hover {
+  color: #FF79DA;
+  z-index: 1;
+  transition: 350ms;
+}
+
+.coeur__StartUn {
+  position: absolute;
+  right: 29px;
+  font-size: 1.4rem;
+}
+
+.coeur__StartUn:hover {
+  display: none;
+  z-index: -1;
+}
+
+.coeur__endDeux {
+  color: white;
+  font-size: 1.4rem;
+}
+
+.coeur__endDeux:hover {
+  color: #FF79DA;
+  z-index: 1;
+  transition: 350ms;
+}
+
 /* Bouton */
-.btn {
+.btnPrimary {
   width: 300px;
   height: 50px;
   cursor: pointer;
@@ -53,13 +114,38 @@
   color: white;
   font-size: 1.2rem;
 }
-.btn:hover {
+.btnPrimary:hover {
   background: -webkit-linear-gradient(280deg, #f587d5, #9963d1);
   transform: scale(1.01);
   transition: transform 450ms, background 300ms 150ms;
 }
 
 /*Fin bouton */
+/* Bouton check Menu */
+.btnRotation {
+  cursor: pointer;
+  width: 60px;
+  height: 70px;
+  border-radius: 0px 20px 20px 0px;
+  font-size: 1.2rem;
+  color: white;
+  background: #99E2D0;
+  border-style: none;
+  display: none;
+}
+
+.sectionMenu__article a:hover .btnRotation {
+  display: block;
+  animation: deplacement 0.6s 0s cubic-bezier(0.39, 0.575, 0.28, 0.995) forwards;
+}
+.sectionMenu__article a:hover .btnRotation i {
+  animation: rotation 0.6s 0s cubic-bezier(0.39, 0.575, 0.28, 0.995) forwards;
+}
+.sectionMenu__article a:hover .sectionMenu__article__plat__wrap {
+  width: 190px;
+}
+
+/* Fin bouton check menu */
 /* Eléments principaux du site */
 body {
   font-family: "roboto";
@@ -91,6 +177,12 @@ body .footer {
 }
 .header__logo h1 {
   font-size: 3rem;
+}
+.header i {
+  color: #4b4b4b;
+}
+.header i:hover {
+  color: #99E2D0;
 }
 
 /* Fin header */
@@ -182,6 +274,9 @@ body .footer {
 .sectionNav__Ul a :hover {
   background: #fde5f6;
 }
+.sectionNav__Ul a :hover .a__Icone i {
+  color: #9356DC;
+}
 .sectionNav__Ul a li {
   box-shadow: 2px 2px 10px #cccccc;
   border-radius: 20px;
@@ -244,22 +339,6 @@ body .footer {
   justify-content: space-between;
   position: relative;
 }
-.sectionRestaurant__Description p .coeur__Start {
-  position: absolute;
-  right: 0px;
-}
-.sectionRestaurant__Description p .coeur__Start:hover {
-  display: none;
-  z-index: -1;
-}
-.sectionRestaurant__Description p .coeur__end {
-  color: white;
-}
-.sectionRestaurant__Description p .coeur__end:hover {
-  color: #FF79DA;
-  z-index: 1;
-  transition: 350ms;
-}
 .sectionRestaurant__Image img {
   width: 100%;
   height: 100%;
@@ -283,7 +362,7 @@ body .footer {
 /* section menu */
 .sectionMenu {
   position: relative;
-  bottom: 30px;
+  bottom: 35px;
   background: #f2f2f2;
   display: flex;
   flex-wrap: wrap;
@@ -312,24 +391,31 @@ body .footer {
 }
 .sectionMenu__article__plat {
   margin: 2%;
-  padding: 10px;
   background: white;
   box-shadow: 2px 2px 10px #cccccc;
   border-radius: 20px;
+  height: 70px;
+  width: 270px;
 }
 .sectionMenu__article__plat a {
   text-decoration: none;
   color: black;
   display: flex;
 }
+.sectionMenu__article__plat__wrap {
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+}
 .sectionMenu__article__plat__h3 {
   font-size: 0.8rem;
+  width: 100%;
 }
 .sectionMenu__article__plat__description {
   font-size: 0.8rem;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 .sectionMenu__article .coussin1 {
   animation: apparition 2s 0.4s cubic-bezier(0.39, 0.575, 0.28, 0.995) forwards;
@@ -344,12 +430,65 @@ body .footer {
   animation: apparition 2s 1s cubic-bezier(0.39, 0.575, 0.28, 0.995) forwards;
 }
 
-.sectionMenu__article__plat__btn {
-  width: 100px;
+/* Sur toutes les pages */
+/* Sur les écrans, quand la largeur de la fenêtre fait au maximum 910px/500px */
+@media all and (max-width: 1024px) {
+  .footer {
+    position: relative;
+    bottom: 60px;
+  }
 }
-
-.sectionMenu__article__plat__btn__check {
-  width: 100%;
+@media all and (max-width: 910px) {
+  .footer {
+    padding: 0px 20px 0px 20px;
+    font-size: 0.8rem;
+  }
+}
+@media all and (max-width: 500px) {
+  .footer {
+    margin-top: 0px;
+  }
+  .footer__ul ul {
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 1rem;
+  }
+}
+/* Sur toutes les pages menu */
+/* Sur les écrans, quand la largeur de la fenêtre fait au maximum 910px /450px */
+@media all and (max-width: 1024px) {
+  .sectionMenu {
+    border-radius: 40px 40px 0px 0px;
+    padding-bottom: 50px;
+  }
+}
+@media all and (max-width: 910px) {
+  .sectionMenu {
+    flex-direction: column;
+    width: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }
+  .sectionMenu__h2 {
+    width: 90%;
+    padding: 0px 10px 0px 10px;
+  }
+  .sectionMenu__article {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+@media all and (max-width: 450px) {
+  .sectionMenu {
+    width: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
