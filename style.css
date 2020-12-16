@@ -1,8 +1,4 @@
 @charset "UTF-8";
-/* Définition des couleurs */
-/* Fin définition des couleurs */
-/* Définition shadow */
-/* Fin définition shadow */
 /* Définition des polices personnalisées */
 @font-face {
   font-family: "shrikhand";
@@ -17,131 +13,34 @@
   font-style: normal;
 }
 /* Fin des polices personnalisées */
-/* Section Mind */
-.form__result {
-  display: flex;
-  flex-direction: column;
-  background: #f2f2f2;
-  border-radius: 20px;
-  padding: 0px 0px 40px 0px;
+/* Définition des couleurs */
+/* Fin définition des couleurs */
+/* Définition shadow */
+/* Fin définition shadow */
+/* Définition effet apparition menu */
+@keyframes apparition {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
-.form__result__icone {
-  background: #d6d6d6;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  border-radius: 20px 20px 0px 0px;
-  border-top: 5px solid #bebebe;
-  padding-left: 20px;
+/* Fin définition effet apparition menu */
+/* Définition effet déplacement check */
+@keyframes deplacement {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
-.form__result__icone__search {
-  border-style: none;
-  background: #d6d6d6;
-  font-weight: bold;
-  margin-left: 20px;
-  font-size: 1rem;
-}
-.form__result__h2 {
-  padding-left: 20px;
-}
-.form__result__h2 h3 {
-  color: #9a9a9a;
-  font-weight: normal;
-}
-.form__result__button {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-}
-
-/* Fin header */
-/* Section Nav */
-.sectionNav__Ul {
-  list-style-type: none;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  padding-left: 0px;
-}
-.sectionNav__Ul li {
-  box-shadow: 2px 2px 10px #cccccc;
-  border-radius: 20px;
-  height: 50px;
-  background: #f2f2f2;
-  display: flex;
-  align-items: center;
-  width: 220px;
-  margin: 10px 15px 10px 15px;
-}
-.sectionNav__Ul li a {
-  text-decoration: none;
-}
-.sectionNav__Ul li a .a__Decimal {
-  background: #9356DC;
-  border-radius: 30px;
-  color: white;
-  position: relative;
-  right: 12px;
-  padding: 5px 9px 5px 9px;
-  font-size: 0.8rem;
-}
-.sectionNav__Ul li a .a__Description {
-  font-weight: bold;
-  color: black;
-  font-size: 0.8rem;
-  text-align: center;
-  padding-left: 10px;
-}
-.sectionNav__Ul li a .a__Icone i {
-  color: #9a9a9a;
-}
-
-/* Fin section Nav */
-/* Section Restaurant */
-.sectionRestaurant {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-}
-.sectionRestaurant__H2 {
-  width: 98%;
-}
-.sectionRestaurant__Carte {
-  display: flex;
-  flex-direction: column;
-  padding: 5px;
-  box-shadow: 2px 2px 10px #cccccc;
-  border-radius: 20px;
-  width: 22%;
-  margin: 0px 10px 0px 10px;
-}
-.sectionRestaurant__Carte a {
-  text-decoration: none;
-}
-.sectionRestaurant__Description {
-  color: black;
-}
-.sectionRestaurant__Description p {
-  display: flex;
-  justify-content: space-between;
-}
-.sectionRestaurant__Description p .coeur__End {
-  display: none;
-}
-.sectionRestaurant__Description p .coeur__Start:hover {
-  display: none;
-}
-.sectionRestaurant__Image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 15px 15px 0px 0px;
-}
-
-/* Fin section Restaurant */
+/* Fin définition déplacement check */
 /* Bouton */
 .btn {
   width: 300px;
@@ -225,8 +124,150 @@ body .footer {
   text-decoration: none;
   color: #f2f2f2;
 }
+.footer__ul a:hover {
+  text-decoration: underline;
+}
 
 /* Fin footer */
+/* Section Mind */
+.form__result {
+  display: flex;
+  flex-direction: column;
+  background: #f2f2f2;
+  border-radius: 20px;
+  padding: 0px 0px 40px 0px;
+}
+.form__result__icone {
+  background: #d6d6d6;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  border-radius: 20px 20px 0px 0px;
+  border-top: 5px solid #bebebe;
+  padding-left: 20px;
+}
+.form__result__icone__search {
+  border-style: none;
+  background: #d6d6d6;
+  font-weight: bold;
+  margin-left: 20px;
+  font-size: 1rem;
+}
+.form__result__h2 {
+  padding-left: 20px;
+}
+.form__result__h2 h3 {
+  color: #9a9a9a;
+  font-weight: normal;
+}
+.form__result__button {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Fin header */
+/* Section Nav */
+.sectionNav__Ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-left: 0px;
+}
+.sectionNav__Ul a {
+  text-decoration: none;
+}
+.sectionNav__Ul a :hover {
+  background: #fde5f6;
+}
+.sectionNav__Ul a li {
+  box-shadow: 2px 2px 10px #cccccc;
+  border-radius: 20px;
+  height: 50px;
+  background: #f2f2f2;
+  display: flex;
+  align-items: center;
+  width: 220px;
+  margin: 10px 15px 10px 15px;
+}
+.sectionNav__Ul a li .a__Decimal {
+  background: #9356DC;
+  border-radius: 30px;
+  color: white;
+  position: relative;
+  right: 12px;
+  padding: 5px 9px 5px 9px;
+  font-size: 0.8rem;
+}
+.sectionNav__Ul a li .a__Description {
+  font-weight: bold;
+  color: black;
+  font-size: 0.8rem;
+  text-align: center;
+  padding-left: 10px;
+}
+.sectionNav__Ul a li .a__Icone i {
+  color: #9a9a9a;
+}
+
+/* Fin section Nav */
+/* Section Restaurant */
+.sectionRestaurant {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.sectionRestaurant__H2 {
+  width: 98%;
+}
+.sectionRestaurant__Carte {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  box-shadow: 2px 2px 10px #cccccc;
+  border-radius: 20px;
+  width: 22%;
+  margin: 0px 10px 0px 10px;
+}
+.sectionRestaurant__Carte a {
+  text-decoration: none;
+}
+.sectionRestaurant__Description {
+  color: black;
+}
+.sectionRestaurant__Description p {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.sectionRestaurant__Description p .coeur__Start {
+  position: absolute;
+  right: 0px;
+}
+.sectionRestaurant__Description p .coeur__Start:hover {
+  display: none;
+  z-index: -1;
+}
+.sectionRestaurant__Description p .coeur__end {
+  color: white;
+}
+.sectionRestaurant__Description p .coeur__end:hover {
+  color: #FF79DA;
+  z-index: 1;
+  transition: 350ms;
+}
+.sectionRestaurant__Image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px 15px 0px 0px;
+}
+
+/* Fin section Restaurant */
 /* Section mindMenu */
 .background {
   height: 300px;
@@ -270,8 +311,6 @@ body .footer {
   font-weight: normal;
 }
 .sectionMenu__article__plat {
-  display: flex;
-  flex-direction: column;
   margin: 2%;
   padding: 10px;
   background: white;
@@ -281,12 +320,36 @@ body .footer {
 .sectionMenu__article__plat a {
   text-decoration: none;
   color: black;
+  display: flex;
 }
 .sectionMenu__article__plat__h3 {
   font-size: 0.8rem;
 }
 .sectionMenu__article__plat__description {
   font-size: 0.8rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.sectionMenu__article .coussin1 {
+  animation: apparition 2s 0.4s cubic-bezier(0.39, 0.575, 0.28, 0.995) forwards;
+}
+.sectionMenu__article .coussin2 {
+  animation: apparition 2s 0.6s cubic-bezier(0.39, 0.575, 0.28, 0.995) forwards;
+}
+.sectionMenu__article .coussin3 {
+  animation: apparition 2s 0.8s cubic-bezier(0.39, 0.575, 0.28, 0.995) forwards;
+}
+.sectionMenu__article .coussin4 {
+  animation: apparition 2s 1s cubic-bezier(0.39, 0.575, 0.28, 0.995) forwards;
+}
+
+.sectionMenu__article__plat__btn {
+  width: 100px;
+}
+
+.sectionMenu__article__plat__btn__check {
+  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */
