@@ -40,7 +40,6 @@
       }
   }
 }
-
 /* Page accueil */ 
 /* Sur les écrans, quand la largeur de la fenêtre fait au maximum 910px /450px */
 @media all and (max-width:1024px){
@@ -104,8 +103,6 @@
   }
    
 }
-
-
 /* Sur toutes les pages menu */ 
 /* Sur les écrans, quand la largeur de la fenêtre fait au maximum 910px /450px */
 @media all and (max-width:1024px){
@@ -126,15 +123,15 @@
       width: 90%;
       padding: 0px 10px 0px 10px;
     }
-    .coeur__StartUn{
-      right: 38px;
-    }
       &__article{
         width: 100%;
         justify-content: center;
         align-items: center;
         margin-left: 0px;
         margin-right: 0px;
+          &__h3{
+            width: 270px;
+          }
       }
   }
   .none{
@@ -146,8 +143,5 @@
     width: 100%;
     padding-left: 0px;
     padding-right: 0px;
-    .coeur__StartUn{
-      right: 16px;
-    }
   }
 }

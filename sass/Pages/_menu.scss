@@ -35,7 +35,15 @@
       margin: 2%;
         &__h3 h3{
           font-weight: normal;
+          margin-bottom: 5px;
         }
+        .underline{
+          width: 40px;
+          border-bottom: 4px solid $colour-tertiary;
+          display: flex;
+          align-items: flex-start;
+          margin-bottom: 10px;
+        }        
         &__plat{       
           margin: 2%;
           background: white;
@@ -75,9 +83,10 @@
         .coussin4{
           animation: apparition 2s 1s $courbe forwards;
         }
+        .none{
+          opacity: 0;
+        }
     }
 }
-.none{
-  opacity: 0;
-}
+
 
