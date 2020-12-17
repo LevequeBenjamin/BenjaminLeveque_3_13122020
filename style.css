@@ -58,6 +58,7 @@
 }
 
 /* Fin effet 3 petits points */
+/* Coeur page accueil */
 .coeur__Start {
   position: absolute;
   right: 0px;
@@ -66,20 +67,21 @@
 
 .coeur__Start:hover {
   display: none;
-  z-index: -1;
 }
 
 .coeur__end {
-  color: white;
   font-size: 1.2rem;
+  color: white;
 }
 
 .coeur__end:hover {
-  color: #FF79DA;
   z-index: 1;
+  color: #FF79DA;
   transition: 350ms;
 }
 
+/* Fin coeur page accueil */
+/* Coeur page menu */
 .coeur__StartUn {
   position: absolute;
   right: 29px;
@@ -88,20 +90,61 @@
 
 .coeur__StartUn:hover {
   display: none;
-  z-index: -1;
 }
 
 .coeur__endDeux {
-  color: white;
   font-size: 1.4rem;
+  color: #f2f2f2;
 }
 
 .coeur__endDeux:hover {
-  color: #FF79DA;
   z-index: 1;
+  color: #FF79DA;
   transition: 350ms;
 }
 
+.spinner {
+  width: 44px;
+  height: 44px;
+  border: 8px solid #99E2D0;
+  border-radius: 30px 0 0 0;
+  animation: 2s waiting 1s forwards;
+  transition: border-radius;
+  position: absolute;
+  zoom: 3;
+  top: 50px;
+  left: 41%;
+}
+
+.spinner:after {
+  content: "Loading";
+  color: #99E2D0;
+  position: absolute;
+  bottom: -34px;
+  left: -8px;
+  width: 60px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+@keyframes waiting {
+  0% {
+    border-radius: 30px 0 0 0;
+  }
+  25% {
+    border-radius: 0 30px 0 0;
+  }
+  50% {
+    border-radius: 0 0 30px 0;
+  }
+  75% {
+    border-radius: 0 0 0 30px;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 /* Bouton */
 .btnPrimary {
   width: 300px;
@@ -154,6 +197,9 @@ body {
 body main {
   max-width: 1024px;
   margin: auto;
+}
+body .header {
+  padding: 0px 20px 0px 20px;
 }
 body .header__logo h1 {
   font-family: "shrikhand";
@@ -317,7 +363,7 @@ body .footer {
   align-items: center;
 }
 .sectionRestaurant__H2 {
-  width: 98%;
+  width: 96%;
 }
 .sectionRestaurant__Carte {
   display: flex;
@@ -430,21 +476,46 @@ body .footer {
   animation: apparition 2s 1s cubic-bezier(0.39, 0.575, 0.28, 0.995) forwards;
 }
 
+.none {
+  opacity: 0;
+}
+
 /* Sur toutes les pages */
 /* Sur les écrans, quand la largeur de la fenêtre fait au maximum 910px/500px */
 @media all and (max-width: 1024px) {
   .footer {
-    position: relative;
-    bottom: 60px;
+    padding: 0px 20px 0px 20px;
   }
 }
 @media all and (max-width: 910px) {
+  .spinner {
+    zoom: 3;
+  }
+
+  .header {
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+
+  .header a {
+    position: absolute;
+    left: 20px;
+  }
+
+  .header__logo h1 {
+    font-size: 1.8rem;
+  }
+
   .footer {
-    padding: 0px 20px 0px 20px;
     font-size: 0.8rem;
   }
 }
 @media all and (max-width: 500px) {
+  .spinner {
+    zoom: 2;
+  }
+
   .footer {
     margin-top: 0px;
   }
@@ -452,6 +523,69 @@ body .footer {
     flex-direction: column;
     align-items: flex-start;
     font-size: 1rem;
+  }
+}
+/* Page accueil */
+/* Sur les écrans, quand la largeur de la fenêtre fait au maximum 910px /450px */
+@media all and (max-width: 1024px) {
+  .form__result {
+    border-radius: 0px;
+  }
+  .form__result__icone {
+    border-radius: 0px;
+  }
+
+  .sectionNav {
+    padding: 0px 20px 0px 20px;
+  }
+
+  .sectionRestaurant {
+    width: 98%;
+  }
+  .sectionRestaurant__Carte {
+    width: 40%;
+    margin: 1.5%;
+  }
+}
+@media all and (max-width: 970px) {
+  .sectionNav__Ul h2 {
+    width: 98%;
+  }
+}
+@media all and (max-width: 790px) {
+  .form__result__icone {
+    padding-left: 0px;
+    justify-content: center;
+  }
+  .form__result__h2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .sectionNav__Ul {
+    flex-direction: column;
+  }
+}
+@media all and (max-width: 425px) {
+  .sectionRestaurant {
+    flex-direction: column;
+  }
+  .sectionRestaurant__Carte {
+    width: 90%;
+    height: 200px;
+  }
+  .sectionRestaurant__Image img {
+    height: 150px;
+  }
+  .sectionRestaurant__Description h3 {
+    font-size: 1rem;
+    margin: 0px;
+  }
+  .sectionRestaurant__Description p {
+    font-size: 0.8rem;
+    margin: 0px;
   }
 }
 /* Sur toutes les pages menu */
@@ -475,6 +609,9 @@ body .footer {
     width: 90%;
     padding: 0px 10px 0px 10px;
   }
+  .sectionMenu .coeur__StartUn {
+    right: 38px;
+  }
   .sectionMenu__article {
     width: 100%;
     justify-content: center;
@@ -482,12 +619,19 @@ body .footer {
     margin-left: 0px;
     margin-right: 0px;
   }
+
+  .none {
+    display: none;
+  }
 }
 @media all and (max-width: 450px) {
   .sectionMenu {
     width: 100%;
     padding-left: 0px;
     padding-right: 0px;
+  }
+  .sectionMenu .coeur__StartUn {
+    right: 16px;
   }
 }
 

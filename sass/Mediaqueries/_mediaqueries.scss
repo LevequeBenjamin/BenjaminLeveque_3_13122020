@@ -4,17 +4,33 @@
 /* Sur les écrans, quand la largeur de la fenêtre fait au maximum 910px/500px */
 @media all and (max-width: 1024px){
   .footer{
-    position: relative;
-    bottom: 60px;
+    padding: 0px 20px 0px 20px;
   }
 }
 @media all and (max-width: 910px){
+  .spinner{
+    zoom: 3;
+  }
+  .header{
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+  .header a{
+    position: absolute;
+    left: 20px;
+  }
+  .header__logo h1{
+    font-size: 1.8rem;  
+  }
   .footer{
-    padding: 0px 20px 0px 20px;
     font-size: 0.8rem;
 }
 }
 @media all and (max-width: 500px){
+  .spinner{
+    zoom: 2;
+  }
   .footer{
     margin-top: 0px;
       &__ul ul{
@@ -23,6 +39,70 @@
         font-size: 1rem;
       }
   }
+}
+
+/* Page accueil */ 
+/* Sur les écrans, quand la largeur de la fenêtre fait au maximum 910px /450px */
+@media all and (max-width:1024px){
+  .form__result{
+    border-radius: 0px;
+    &__icone{
+      border-radius: 0px;
+    }
+  }
+  .sectionNav{
+    padding: 0px 20px 0px 20px;
+  }
+  .sectionRestaurant{
+    width: 98%;
+    &__Carte{
+      width: 40%;
+      margin: 1.5%;
+    } 
+  }
+}
+@media all and (max-width:970px){
+  .sectionNav__Ul h2{
+    width: 98%;
+  }
+}
+@media all and (max-width:790px){
+  .form__result{
+    &__icone{
+      padding-left: 0px;
+      justify-content: center;
+    }
+    &__h2{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  }
+  .sectionNav__Ul{
+    flex-direction: column;
+  }
+}
+@media all and (max-width:425px){
+  .sectionRestaurant{
+    flex-direction: column;
+    &__Carte{
+      width: 90%;
+      height: 200px;
+    }
+    &__Image img{
+      height: 150px;
+    }
+    &__Description h3{
+      font-size: 1rem;
+      margin: 0px;
+    }
+    &__Description p{
+      font-size: 0.8rem;
+      margin: 0px;
+    }
+  }
+   
 }
 
 
@@ -46,6 +126,9 @@
       width: 90%;
       padding: 0px 10px 0px 10px;
     }
+    .coeur__StartUn{
+      right: 38px;
+    }
       &__article{
         width: 100%;
         justify-content: center;
@@ -54,11 +137,17 @@
         margin-right: 0px;
       }
   }
+  .none{
+    display: none;
+  }
 }
 @media all and (max-width: 450px){
   .sectionMenu{
     width: 100%;
     padding-left: 0px;
     padding-right: 0px;
+    .coeur__StartUn{
+      right: 16px;
+    }
   }
 }

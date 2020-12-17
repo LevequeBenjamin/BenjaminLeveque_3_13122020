@@ -60,10 +60,11 @@ $courbe: cubic-bezier(0.39,0.575,0.28,0.995);
 /* Effet 3 petits points */
 .ellips{
   text-overflow: ellipsis;
-              overflow: hidden;
-              white-space: nowrap;
+  overflow: hidden;
+  white-space: nowrap;
 }
 /* Fin effet 3 petits points */ 
+/* Coeur page accueil */
 .coeur__Start{
   position: absolute;
   right: 0px;
@@ -71,18 +72,18 @@ $courbe: cubic-bezier(0.39,0.575,0.28,0.995);
 }
 .coeur__Start:hover{
   display: none;
-  z-index: -1;
 }
 .coeur__end{
-  color: white;
   font-size: 1.2rem;
+  color: white;
 }
 .coeur__end:hover{
-  color: $colour-secondary;
   z-index: 1;
+  color: $colour-secondary;
   transition: 350ms;
 }
-
+/* Fin coeur page accueil */
+/* Coeur page menu */ 
 .coeur__StartUn{
   position: absolute;
   right: 29px;
@@ -90,14 +91,56 @@ $courbe: cubic-bezier(0.39,0.575,0.28,0.995);
 }
 .coeur__StartUn:hover{
   display: none;
-  z-index: -1;
 }
 .coeur__endDeux{
-  color: white;
   font-size: 1.4rem;
+  color: $colour-background;
 }
 .coeur__endDeux:hover{
-  color: $colour-secondary;
   z-index: 1;
+  color: $colour-secondary;
   transition: 350ms;
+}
+
+
+.spinner {
+  width: 44px;
+  height: 44px;
+  border: 8px solid $colour-tertiary;
+  border-radius: 30px 0 0 0;
+  animation: 2s waiting 1s forwards;
+  transition: border-radius;
+  position: absolute;
+  zoom: 3;
+  top: 50px;
+  left: 41%;
+}
+.spinner:after {
+  content: "Loading";
+  color: $colour-tertiary;
+  position: absolute;
+  bottom: -34px;
+  left: -8px;
+  width: 60px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+@keyframes waiting {
+  0% {
+    border-radius: 30px 0 0 0;
+  }
+  25% {
+    border-radius: 0 30px 0 0;
+  }
+  50% {
+    border-radius: 0 0 30px 0;
+  }
+  75% {
+    border-radius: 0 0 0 30px;
+  }
+  100%{
+    opacity: 0;
+  }
 }
