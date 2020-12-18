@@ -8,6 +8,7 @@
 @media all and (max-width: 910px){
   .spinner{
     zoom: 3;
+    -moz-transform: translate(-50%, -50%) scale(3);
   }
   .header{
     display: flex;
@@ -28,6 +29,7 @@
 @media all and (max-width: 500px){
   .spinner{
     zoom: 2;
+    -moz-transform: translate(-50%, -50%) scale(2);
   }
     .footer{
       margin-top: 0px;
@@ -39,7 +41,7 @@
     }
 }
 /* Page accueil */ 
-/* Sur les écrans, quand la largeur de la fenêtre fait au maximum 1024px/970px/790px/425px */
+/* Sur les écrans, quand la largeur de la fenêtre fait au maximum 1024px/790px/425px */
 @media all and (max-width:1024px){
   .form__result{
     border-radius: 0px;
@@ -47,20 +49,12 @@
       border-radius: 0px;
     }
   }
-  .sectionNav{
-    padding: 0px 20px 0px 20px;
-  }
   .sectionRestaurant{
-    width: 98%;
+    width: 100%;
     &__Carte{
       width: 40%;
       margin: 1.5%;
     } 
-  }
-}
-@media all and (max-width:970px){
-  .sectionNav__Ul h2{
-    width: 98%;
   }
 }
 @media all and (max-width:790px){
@@ -83,6 +77,9 @@
 @media all and (max-width:425px){
   .sectionRestaurant{
     flex-direction: column;
+    &__H2{
+      width: 93%;
+    }
     &__Carte{
       width: 90%;
       height: 200px;

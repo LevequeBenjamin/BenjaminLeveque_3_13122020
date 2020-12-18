@@ -1,3 +1,9 @@
+.sectionNav__Ul a:hover{
+  background: $colour-secondary-veryclair;
+    .li__Icone i{
+      color: $colour-primary;
+    }
+}
 /* Effet 3 petits points */
 .ellips{
   text-overflow: ellipsis;
@@ -53,9 +59,11 @@
   transition: border-radius;
   position: absolute;
   zoom: 3;
-  top: 100px;
+  top: 25%;
   left: 50%;
   transform: translate(-50%, -50%);
+  zoom: 4;
+  -moz-transform: translate(-50%, -50%) scale(4);/*Firefox*/
 }
 .spinner:after {
   content: "Loading";

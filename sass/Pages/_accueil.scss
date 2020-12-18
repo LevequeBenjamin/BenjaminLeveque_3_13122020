@@ -37,22 +37,17 @@
 /* Fin section mind */ 
 /* Section Nav */ 
 .sectionNav{
+    padding: 0px 20px 0px 20px;
   &__Ul{
-    list-style-type:none;
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
     padding-left: 0px;
-    a{
-      text-decoration: none;
-      :hover{
-        background: $colour-secondary-veryclair;
-          .a__Icone i{
-            color: $colour-primary;
-          }
+      &__H2{
+        width: 98%
       }
-      li{
+      .li{
         @include carteShadowRadius;
         height: 50px;
         background: $colour-background;
@@ -60,7 +55,8 @@
         align-items: center;
         width: 220px;
         margin: 10px 15px 10px 15px;
-              .a__Decimal{
+        text-decoration: none;
+              &__Decimal{
                 background: $colour-primary;
                 border-radius: 30px;
                 color: white;
@@ -69,20 +65,20 @@
                 padding: 5px 9px 5px 9px;
                 font-size: 0.8rem;
               }
-              .a__Description{
+              &__Description{
                 font-weight: bold;
                 color: black;
                 font-size: 0.8rem;
                 text-align: center;
                 padding-left: 10px;
               }
-              .a__Icone i{
+              &__Icone i{
                 color: $colour-icone;
               }
           }   
       }
   }
-}
+
 /* Fin section Nav */ 
 /* Section Restaurant */ 
 .sectionRestaurant{
@@ -93,7 +89,8 @@
   align-items: center;
   padding-bottom: 50px;
     &__H2{
-      width: 96%;
+      width: 98%;
+      padding: 0px 0px 0px 20px;
     }
     &__Carte{
       display: flex;
