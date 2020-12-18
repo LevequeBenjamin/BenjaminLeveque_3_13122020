@@ -1,0 +1,18 @@
+/* Définition des couleurs */ 
+$colour-primary: #9356DC;
+$colour-primary-clair:#9963d1;
+$colour-secondary: #FF79DA; 
+$colour-secondary-clair:#f587d5;
+$colour-secondary-veryclair: #fde5f6;
+$colour-tertiary: #99E2D0;
+$colour-background: #f2f2f2;
+$colour-background-dark-dark:#bebebe;
+$colour-background-dark:#d6d6d6;
+$colour-background-start:-webkit-linear-gradient(280deg, $colour-secondary, $colour-primary);
+$colour-background-end: -webkit-linear-gradient(280deg, $colour-secondary-clair, $colour-primary-clair);
+$colour-background-footer: #4b4b4b;
+$colour-icone: #9a9a9a;
+/* Fin définition des couleurs */ 
+/* Définition effet apparition menu */
+$courbe: cubic-bezier(0.39,0.575,0.28,0.995);
+/* Fin définition effet apparition menu */

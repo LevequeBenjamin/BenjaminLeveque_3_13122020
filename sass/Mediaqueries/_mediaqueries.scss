@@ -1,7 +1,5 @@
-
-
 /* Sur toutes les pages */ 
-/* Sur les écrans, quand la largeur de la fenêtre fait au maximum 910px/500px */
+/* Sur les écrans, quand la largeur de la fenêtre fait au maximum 1024px/910px/500px */
 @media all and (max-width: 1024px){
   .footer{
     padding: 0px 20px 0px 20px;
@@ -25,23 +23,23 @@
   }
   .footer{
     font-size: 0.8rem;
-}
+  }
 }
 @media all and (max-width: 500px){
   .spinner{
     zoom: 2;
   }
-  .footer{
-    margin-top: 0px;
-      &__ul ul{
-        flex-direction: column;
-        align-items: flex-start;
-        font-size: 1rem;
+    .footer{
+      margin-top: 0px;
+        &__ul ul{
+          flex-direction: column;
+          align-items: flex-start;
+          font-size: 1rem;
       }
-  }
+    }
 }
 /* Page accueil */ 
-/* Sur les écrans, quand la largeur de la fenêtre fait au maximum 910px /450px */
+/* Sur les écrans, quand la largeur de la fenêtre fait au maximum 1024px/970px/790px/425px */
 @media all and (max-width:1024px){
   .form__result{
     border-radius: 0px;
@@ -101,13 +99,11 @@
       margin: 0px;
     }
   }
-   
 }
 /* Sur toutes les pages menu */ 
-/* Sur les écrans, quand la largeur de la fenêtre fait au maximum 910px /450px */
+/* Sur les écrans, quand la largeur de la fenêtre fait au maximum 1024px/910px/450px */
 @media all and (max-width:1024px){
   .sectionMenu{
-    border-radius: 40px 40px 0px 0px;
     padding-bottom: 50px;
     }
 }
@@ -139,9 +135,16 @@
   }
 }
 @media all and (max-width: 450px){
-  .sectionMenu{
-    width: 100%;
-    padding-left: 0px;
-    padding-right: 0px;
+  body{
+    background: $colour-background;
   }
+    .header{
+      background: white;
+    }
+    .sectionMenu{
+      border-radius: 40px 40px 0px 0px;
+      width: 100%;
+      padding: 0px;
+    }
 }
+

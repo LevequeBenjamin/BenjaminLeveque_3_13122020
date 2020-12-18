@@ -1,0 +1,10 @@
+/* Définition shadow */ 
+@mixin carteShadowRadius{
+  box-shadow: 2px 2px 10px #cccccc;
+  border-radius: 20px;
+}
+@mixin btnShadowRadius{
+  box-shadow: 10px 10px 10px #cccccc;
+  border-radius: 30px;
+}
+/* Fin définition shadow */

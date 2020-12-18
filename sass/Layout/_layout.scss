@@ -2,34 +2,21 @@
 body{
   font-family: "roboto";
   margin: auto;
-    main{
+}
+main{
       max-width: 1024px;
       margin: auto;
-    }
-    .header{
-      padding: 0px 20px 0px 20px;
-    }
-    .header__logo h1{
-      font-family: "shrikhand";
-    }
-    .footer__titre h1{
-      font-family: "shrikhand";
-      font-weight: normal;
-    }
-    .footer{
-      max-width: 2560px;
-    }
 }
-/* Fin éléments principaux du site */ 
-/* Header */ 
 .header{
+  padding: 0px 20px 0px 20px;
   display: flex;
   align-items: center;
+    &__logo h1{
+      font-family: "shrikhand";
+      font-size: 3rem;
+    }
     a{
       padding-right: 20px;
-    }
-    &__logo h1{
-      font-size: 3rem;
     }
     i{
       color: $colour-background-footer;
@@ -37,11 +24,10 @@ body{
     }
     i:hover{
       color: $colour-tertiary;
-    }
+      }
 }
-/* Fin header */ 
-/* Footer */
 .footer{
+  max-width: 2560px;
   background: $colour-background-footer;
   min-height: 120px;
   color: $colour-background;
@@ -57,20 +43,26 @@ body{
     }
     &__titre{
       font-size: 0.8rem;
-    }
-    &__ul ul{
-      display: flex;
-      list-style-type: none;
-      justify-content: space-between;
-      align-items: center;
-      padding-left: 0px;
-    }
-    &__ul a{
-      text-decoration: none;
-      color: $colour-background;
-    }
-    &__ul a:hover{
-      text-decoration: underline;
-    }
-} 
-/* Fin footer */ 
+      h1{
+        font-family: "shrikhand";
+        font-weight: normal;
+      }
+      }
+      &__ul ul{
+        display: flex;
+        list-style-type: none;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 0px;
+      }
+      &__ul a{
+        text-decoration: none;
+        color: $colour-background;
+      }
+      &__ul a:hover{
+        text-decoration: underline;
+      }
+}
+
+/* Fin éléments principaux du site */ 
+

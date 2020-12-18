@@ -15,6 +15,8 @@
 /* Fin des polices personnalisées */
 /* Définition des couleurs */
 /* Fin définition des couleurs */
+/* Définition effet apparition menu */
+/* Fin définition effet apparition menu */
 /* Définition shadow */
 /* Fin définition shadow */
 /* Définition effet apparition menu */
@@ -50,6 +52,26 @@
     transform: rotate(360deg);
   }
 }
+/* Fin définition rotation check */
+/* Spinner */
+@keyframes waiting {
+  0% {
+    border-radius: 30px 0 0 0;
+  }
+  25% {
+    border-radius: 0 30px 0 0;
+  }
+  50% {
+    border-radius: 0 0 30px 0;
+  }
+  75% {
+    border-radius: 0 0 0 30px;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/* Fin spinner */
 /* Effet 3 petits points */
 .ellips {
   text-overflow: ellipsis;
@@ -129,24 +151,29 @@
   font-weight: bold;
 }
 
-@keyframes waiting {
-  0% {
-    border-radius: 30px 0 0 0;
-  }
-  25% {
-    border-radius: 0 30px 0 0;
-  }
-  50% {
-    border-radius: 0 0 30px 0;
-  }
-  75% {
-    border-radius: 0 0 0 30px;
-  }
-  100% {
-    opacity: 0;
-  }
-}
 /* Fin load spinner */
+/* Apparition défilement menu */
+.coussin1 {
+  animation: apparition 2s 0.4s cubic-bezier(0.39, 0.575, 0.28, 0.995) forwards;
+}
+
+.coussin2 {
+  animation: apparition 2s 0.6s cubic-bezier(0.39, 0.575, 0.28, 0.995) forwards;
+}
+
+.coussin3 {
+  animation: apparition 2s 0.8s cubic-bezier(0.39, 0.575, 0.28, 0.995) forwards;
+}
+
+.coussin4 {
+  animation: apparition 2s 1s cubic-bezier(0.39, 0.575, 0.28, 0.995) forwards;
+}
+
+.none {
+  opacity: 0;
+}
+
+/* Fin défilement menu */
 /* Bouton */
 .btnPrimary {
   width: 300px;
@@ -191,40 +218,50 @@
 }
 
 /* Fin bouton check menu */
+/* Nouveau Restaurant */
+.newRelative {
+  position: relative;
+}
+.newRelative .new {
+  position: absolute;
+  border: 2px solid #99E2D0;
+  background: #99E2D0;
+  color: #2c9c81;
+  font-weight: bold;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  top: 10px;
+  right: 10px;
+  width: 90px;
+  height: 30px;
+}
+
+/* Fin nouveau restaurant */
 /* Eléments principaux du site */
 body {
   font-family: "roboto";
   margin: auto;
 }
-body main {
+
+main {
   max-width: 1024px;
   margin: auto;
 }
-body .header {
-  padding: 0px 20px 0px 20px;
-}
-body .header__logo h1 {
-  font-family: "shrikhand";
-}
-body .footer__titre h1 {
-  font-family: "shrikhand";
-  font-weight: normal;
-}
-body .footer {
-  max-width: 2560px;
-}
 
-/* Fin éléments principaux du site */
-/* Header */
 .header {
+  padding: 0px 20px 0px 20px;
   display: flex;
   align-items: center;
 }
+.header__logo h1 {
+  font-family: "shrikhand";
+  font-size: 3rem;
+}
 .header a {
   padding-right: 20px;
-}
-.header__logo h1 {
-  font-size: 3rem;
 }
 .header i {
   color: #4b4b4b;
@@ -234,9 +271,8 @@ body .footer {
   color: #99E2D0;
 }
 
-/* Fin header */
-/* Footer */
 .footer {
+  max-width: 2560px;
   background: #4b4b4b;
   min-height: 120px;
   color: #f2f2f2;
@@ -254,6 +290,10 @@ body .footer {
 .footer__titre {
   font-size: 0.8rem;
 }
+.footer__titre h1 {
+  font-family: "shrikhand";
+  font-weight: normal;
+}
 .footer__ul ul {
   display: flex;
   list-style-type: none;
@@ -269,7 +309,7 @@ body .footer {
   text-decoration: underline;
 }
 
-/* Fin footer */
+/* Fin éléments principaux du site */
 /* Section Mind */
 .form__result {
   display: flex;
@@ -307,7 +347,7 @@ body .footer {
   margin-top: 20px;
 }
 
-/* Fin header */
+/* Fin section mind */
 /* Section Nav */
 .sectionNav__Ul {
   list-style-type: none;
@@ -430,6 +470,10 @@ body .footer {
 .sectionMenu__h2 h2 {
   font-family: "shrikhand";
 }
+.sectionMenu .bottom {
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
 .sectionMenu__article {
   display: flex;
   flex-direction: column;
@@ -475,24 +519,9 @@ body .footer {
   justify-content: space-between;
   width: 100%;
 }
-.sectionMenu__article .coussin1 {
-  animation: apparition 2s 0.4s cubic-bezier(0.39, 0.575, 0.28, 0.995) forwards;
-}
-.sectionMenu__article .coussin2 {
-  animation: apparition 2s 0.6s cubic-bezier(0.39, 0.575, 0.28, 0.995) forwards;
-}
-.sectionMenu__article .coussin3 {
-  animation: apparition 2s 0.8s cubic-bezier(0.39, 0.575, 0.28, 0.995) forwards;
-}
-.sectionMenu__article .coussin4 {
-  animation: apparition 2s 1s cubic-bezier(0.39, 0.575, 0.28, 0.995) forwards;
-}
-.sectionMenu__article .none {
-  opacity: 0;
-}
 
 /* Sur toutes les pages */
-/* Sur les écrans, quand la largeur de la fenêtre fait au maximum 910px/500px */
+/* Sur les écrans, quand la largeur de la fenêtre fait au maximum 1024px/910px/500px */
 @media all and (max-width: 1024px) {
   .footer {
     padding: 0px 20px 0px 20px;
@@ -537,7 +566,7 @@ body .footer {
   }
 }
 /* Page accueil */
-/* Sur les écrans, quand la largeur de la fenêtre fait au maximum 910px /450px */
+/* Sur les écrans, quand la largeur de la fenêtre fait au maximum 1024px/970px/790px/425px */
 @media all and (max-width: 1024px) {
   .form__result {
     border-radius: 0px;
@@ -600,10 +629,9 @@ body .footer {
   }
 }
 /* Sur toutes les pages menu */
-/* Sur les écrans, quand la largeur de la fenêtre fait au maximum 910px /450px */
+/* Sur les écrans, quand la largeur de la fenêtre fait au maximum 1024px/910px/450px */
 @media all and (max-width: 1024px) {
   .sectionMenu {
-    border-radius: 40px 40px 0px 0px;
     padding-bottom: 50px;
   }
 }
@@ -636,10 +664,18 @@ body .footer {
   }
 }
 @media all and (max-width: 450px) {
+  body {
+    background: #f2f2f2;
+  }
+
+  .header {
+    background: white;
+  }
+
   .sectionMenu {
+    border-radius: 40px 40px 0px 0px;
     width: 100%;
-    padding-left: 0px;
-    padding-right: 0px;
+    padding: 0px;
   }
 }
 

@@ -1,0 +1,53 @@
+/* Définition effet apparition menu */
+@keyframes apparition{
+  from{
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Fin définition effet apparition menu */
+/* Définition effet déplacement check */ 
+@keyframes deplacement{
+  from{
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  to{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+/* Fin définition déplacement check */
+/*Définition rotation check */
+@keyframes rotation{
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+/* Fin définition rotation check */ 
+/* Spinner */ 
+@keyframes waiting {
+  0% {
+    border-radius: 30px 0 0 0;
+  }
+  25% {
+    border-radius: 0 30px 0 0;
+  }
+  50% {
+    border-radius: 0 0 30px 0;
+  }
+  75% {
+    border-radius: 0 0 0 30px;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+/* Fin spinner */
