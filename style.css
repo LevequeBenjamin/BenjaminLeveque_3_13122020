@@ -664,7 +664,7 @@ main {
   }
 }
 @media all and (max-width: 450px) {
-  body {
+  .fondAbsolute {
     background: #f2f2f2;
   }
 
