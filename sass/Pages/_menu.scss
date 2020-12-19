@@ -3,9 +3,7 @@
   height: 300px;
 }
 .background img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  @include photo;
 }
 /* Fin section mindMenu */ 
 /* section menu */ 
@@ -65,11 +63,11 @@
               padding-right: 10px;
             }
             &__h3{
-              font-size: 0.8rem;
+              @include font2;
               width: 100%;
             }
             &__description{
-              font-size: 0.8rem;
+              @include font2;
               display: flex;
               justify-content: space-between;  
               width: 100%;         

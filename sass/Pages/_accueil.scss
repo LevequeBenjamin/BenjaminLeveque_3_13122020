@@ -17,8 +17,9 @@
           border-style: none;
           background: $colour-background-dark;
           font-weight: bold;
-          margin-left: 20px;
-          font-size: 1rem;
+          padding-left: 20px;
+          width: 160px;
+          @include font1;
         }
     }
     &__h2{
@@ -63,12 +64,12 @@
                 position: relative;
                 right: 12px;
                 padding: 5px 9px 5px 9px;
-                font-size: 0.8rem;
+                @include font2;
               }
               &__Description{
                 font-weight: bold;
                 color: black;
-                font-size: 0.8rem;
+                @include font2;
                 text-align: center;
                 padding-left: 10px;
               }
@@ -112,9 +113,7 @@
       position: relative;
     }
     &__Image img{
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+      @include photo;
       border-radius: 15px 15px 0px 0px;
     }  
 }
