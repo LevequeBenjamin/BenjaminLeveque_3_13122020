@@ -210,7 +210,7 @@
 }
 
 /*Fin bouton */
-/* Bouton check Menu */
+/* Bouton cloche Menu */
 .btnRotation {
   cursor: pointer;
   width: 60px;
@@ -234,7 +234,7 @@
   width: 190px;
 }
 
-/* Fin bouton check menu */
+/* Fin bouton cloche menu */
 /* Nouveau Restaurant */
 .newRelative {
   position: relative;
@@ -546,6 +546,7 @@ main {
   .spinner {
     zoom: 3;
     -moz-transform: translate(-50%, -50%) scale(3);
+    /* Firefox */
   }
 
   .header {
@@ -571,6 +572,7 @@ main {
   .spinner {
     zoom: 2;
     -moz-transform: translate(-50%, -50%) scale(2);
+    /*Firefox */
   }
 
   .footer {
@@ -675,6 +677,10 @@ main {
   }
 }
 @media all and (max-width: 450px) {
+  .background {
+    height: 200px;
+  }
+
   .fondAbsolute {
     background: #f2f2f2;
   }

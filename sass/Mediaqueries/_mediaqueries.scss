@@ -8,7 +8,7 @@
 @media all and (max-width: 910px){
   .spinner{
     zoom: 3;
-    -moz-transform: translate(-50%, -50%) scale(3);
+    -moz-transform: translate(-50%, -50%) scale(3); /* Firefox */ 
   }
   .header{
     display: flex;
@@ -29,7 +29,7 @@
 @media all and (max-width: 500px){
   .spinner{
     zoom: 2;
-    -moz-transform: translate(-50%, -50%) scale(2);
+    -moz-transform: translate(-50%, -50%) scale(2); /*Firefox */ 
   }
     .footer{
       margin-top: 0px;
@@ -132,6 +132,9 @@
   }
 }
 @media all and (max-width: 450px){
+  .background{
+    height: 200px;
+  }
   .fondAbsolute{
     background: $colour-background;
   }
