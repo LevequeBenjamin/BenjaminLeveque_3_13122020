@@ -7,4 +7,16 @@
   box-shadow: 10px 10px 10px #cccccc;
   border-radius: 30px;
 }
-/* Fin définition shadow */
+/* Définition photo */
+@mixin photo{
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}
+/* Définition font-size */
+@mixin font1 {
+  font-size: 1rem;
+}
+@mixin font2{
+  font-size: 0.8rem;
+}
