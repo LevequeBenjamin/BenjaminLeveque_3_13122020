@@ -1,13 +1,16 @@
-@import "Base/base.scss";
-@import "Utils/variables.scss";
-@import "Utils/mixin.scss";
-@import "Utils/keyframes.scss";
-@import "Utils/anim.scss";
-@import "Composants/btn.scss";
-@import "Composants/nouveau.scss";
-@import "Layout/layout.scss";
-@import "Pages/accueil.scss";
-@import "Pages/menu.scss";
+@import "Utils/variables";
+@import "Utils/mixin";
+@import "Utils/keyframes";
+@import "Base/base";
+@import "Utils/anim";
+@import "Composants/btn";
+@import "Composants/ldsRoller";
+@import "Composants/nouveau";
+@import "Layout/body-main";
+@import "Layout/header";
+@import "Layout/footer";
+@import "Pages/accueil";
+@import "Pages/menu";
 @import "Mediaqueries/mediaqueries";
 
 

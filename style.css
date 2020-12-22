@@ -1,18 +1,4 @@
 @charset "UTF-8";
-/* Définition des polices personnalisées */
-@font-face {
-  font-family: "shrikhand";
-  src: url("./polices/shrikhand/Shrikhand-Regular.otf");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "roboto";
-  src: url("./polices/roboto/Roboto-Regular.ttf");
-  font-weight: normal;
-  font-style: normal;
-}
-/* Fin des polices personnalisées */
 /* Définition des couleurs */
 /* Fin définition des couleurs */
 /* Définition effet apparition menu */
@@ -55,31 +41,38 @@
 }
 /* Fin définition rotation check */
 /* Spinner */
-@keyframes waiting {
+@keyframes lds-roller {
   0% {
-    border-radius: 30px 0 0 0;
-  }
-  10% {
-    border-radius: 0 30px 0 0;
-  }
-  20% {
-    border-radius: 0 0 30px 0;
-  }
-  30% {
-    border-radius: 0 0 0 30px;
-  }
-  40% {
-    border-radius: 30px 0 0 0;
-  }
-  50% {
-    border-radius: 0 30px 0 0;
+    transform: rotate(0deg);
   }
   100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes finish {
+  from {
+    z-index: 1;
+  }
+  to {
     z-index: -1;
     opacity: 0;
   }
 }
 /* Fin spinner */
+/* Définition des polices personnalisées */
+@font-face {
+  font-family: "shrikhand";
+  src: url("./polices/shrikhand/Shrikhand-Regular.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "roboto";
+  src: url("./polices/roboto/Roboto-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+/* Fin des polices personnalisées */
 .sectionNav__Ul a:hover {
   background: #fde5f6;
 }
@@ -139,37 +132,6 @@
 }
 
 /* Fin coeur page menu */
-/* Load spinner */
-.spinner {
-  width: 44px;
-  height: 44px;
-  border: 8px solid #99E2D0;
-  border-radius: 30px 0 0 0;
-  animation: 4s waiting 0.4s forwards;
-  transition: border-radius;
-  position: absolute;
-  zoom: 3;
-  top: 25%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  zoom: 4;
-  -moz-transform: translate(-50%, -50%) scale(4);
-  /*Firefox*/
-}
-
-.spinner:after {
-  content: "Loading";
-  color: #99E2D0;
-  position: absolute;
-  bottom: -34px;
-  left: -8px;
-  width: 60px;
-  text-align: center;
-  font-size: 18px;
-  font-weight: bold;
-}
-
-/* Fin load spinner */
 /* Apparition défilement menu */
 .coussin1 {
   animation: apparition 2s 0.4s cubic-bezier(0.39, 0.575, 0.28, 0.995);
@@ -236,6 +198,112 @@
 }
 
 /* Fin bouton cloche menu */
+/* Load spinner */
+.containerSpinner {
+  background: white;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  animation: finish 8s forwards;
+}
+
+.lds-roller {
+  position: absolute;
+  top: 15%;
+  left: 46%;
+  transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  /*Firefox*/
+}
+
+.lds-roller div {
+  animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  transform-origin: 40px 40px;
+}
+
+.lds-roller div:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #99E2D0;
+  margin: -4px 0 0 -4px;
+}
+
+.lds-roller div:nth-child(1) {
+  animation-delay: -0.036s;
+}
+
+.lds-roller div:nth-child(1):after {
+  top: 63px;
+  left: 63px;
+}
+
+.lds-roller div:nth-child(2) {
+  animation-delay: -0.072s;
+}
+
+.lds-roller div:nth-child(2):after {
+  top: 68px;
+  left: 56px;
+}
+
+.lds-roller div:nth-child(3) {
+  animation-delay: -0.108s;
+}
+
+.lds-roller div:nth-child(3):after {
+  top: 71px;
+  left: 48px;
+}
+
+.lds-roller div:nth-child(4) {
+  animation-delay: -0.144s;
+}
+
+.lds-roller div:nth-child(4):after {
+  top: 72px;
+  left: 40px;
+}
+
+.lds-roller div:nth-child(5) {
+  animation-delay: -0.18s;
+}
+
+.lds-roller div:nth-child(5):after {
+  top: 71px;
+  left: 32px;
+}
+
+.lds-roller div:nth-child(6) {
+  animation-delay: -0.216s;
+}
+
+.lds-roller div:nth-child(6):after {
+  top: 68px;
+  left: 24px;
+}
+
+.lds-roller div:nth-child(7) {
+  animation-delay: -0.252s;
+}
+
+.lds-roller div:nth-child(7):after {
+  top: 63px;
+  left: 17px;
+}
+
+.lds-roller div:nth-child(8) {
+  animation-delay: -0.288s;
+}
+
+.lds-roller div:nth-child(8):after {
+  top: 56px;
+  left: 12px;
+}
+
 /* Nouveau Restaurant */
 .newRelative {
   position: relative;
@@ -262,13 +330,16 @@
 body {
   font-family: "roboto";
   margin: auto;
+  position: relative;
 }
 
 main {
   max-width: 1024px;
+  position: relative;
   margin: auto;
 }
 
+/* Eléments principaux du site */
 .header {
   padding: 0px 20px 0px 20px;
   display: flex;
@@ -289,6 +360,7 @@ main {
   color: #99E2D0;
 }
 
+/* Eléments principaux du site */
 .footer {
   max-width: 2560px;
   background: #4b4b4b;
@@ -327,7 +399,6 @@ main {
   text-decoration: underline;
 }
 
-/* Fin éléments principaux du site */
 /* Section Mind */
 .form__result {
   display: flex;
@@ -545,12 +616,6 @@ main {
   }
 }
 @media all and (max-width: 910px) {
-  .spinner {
-    zoom: 3;
-    -moz-transform: translate(-50%, -50%) scale(3);
-    /* Firefox */
-  }
-
   .header {
     display: flex;
     justify-content: center;
@@ -571,10 +636,9 @@ main {
   }
 }
 @media all and (max-width: 500px) {
-  .spinner {
-    zoom: 2;
-    -moz-transform: translate(-50%, -50%) scale(2);
-    /*Firefox */
+  .lds-roller {
+    /* Spinner */
+    left: 42%;
   }
 
   .footer {
@@ -622,6 +686,11 @@ main {
   }
 }
 @media all and (max-width: 425px) {
+  .lds-roller {
+    /* Spinner */
+    left: 40%;
+  }
+
   .sectionRestaurant {
     flex-direction: column;
   }

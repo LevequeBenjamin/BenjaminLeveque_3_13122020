@@ -1,0 +1,20 @@
+/* Eléments principaux du site */
+.header{
+  padding: 0px 20px 0px 20px;
+  display: flex;
+  align-items: center;
+    &__logo h1{
+      font-family: "shrikhand";
+      font-size: 3rem;
+    }
+    a{
+      padding-right: 20px;
+    }
+    i{
+      color: $colour-background-footer;
+      font-size: 1.4rem;
+    }
+    i:hover{
+      color: $colour-tertiary;
+      }
+}

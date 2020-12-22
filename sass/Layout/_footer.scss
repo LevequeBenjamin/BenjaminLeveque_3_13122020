@@ -1,31 +1,4 @@
-/* Eléments principaux du site */
-body{
-  font-family: "roboto";
-  margin: auto;
-}
-main{
-      max-width: 1024px;
-      margin: auto;
-}
-.header{
-  padding: 0px 20px 0px 20px;
-  display: flex;
-  align-items: center;
-    &__logo h1{
-      font-family: "shrikhand";
-      font-size: 3rem;
-    }
-    a{
-      padding-right: 20px;
-    }
-    i{
-      color: $colour-background-footer;
-      font-size: 1.4rem;
-    }
-    i:hover{
-      color: $colour-tertiary;
-      }
-}
+/* Eléments principaux du site */ 
 .footer{
   max-width: 2560px;
   background: $colour-background-footer;
@@ -63,5 +36,3 @@ main{
         text-decoration: underline;
       }
 }
-/* Fin éléments principaux du site */ 
-

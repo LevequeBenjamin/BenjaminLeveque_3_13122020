@@ -6,10 +6,6 @@
   }
 }
 @media all and (max-width: 910px){
-  .spinner{
-    zoom: 3;
-    -moz-transform: translate(-50%, -50%) scale(3); /* Firefox */ 
-  }
   .header{
     display: flex;
     justify-content: center;
@@ -27,9 +23,8 @@
   }
 }
 @media all and (max-width: 500px){
-  .spinner{
-    zoom: 2;
-    -moz-transform: translate(-50%, -50%) scale(2); /*Firefox */ 
+  .lds-roller{ /* Spinner */
+    left: 42%;
   }
     .footer{
       margin-top: 0px;
@@ -76,6 +71,9 @@
   }
 }
 @media all and (max-width:425px){
+  .lds-roller{ /* Spinner */
+    left: 40%;
+  }
   .sectionRestaurant{
     flex-direction: column;
     &__H2{
