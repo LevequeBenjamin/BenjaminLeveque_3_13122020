@@ -79,16 +79,16 @@
 /* Fin load spinner */
 /* Apparition défilement menu */ 
 .coussin1{
-  animation: apparition 2s 0.4s $courbe forwards;
+  animation: apparition 2s 0.4s $courbe;
 }
 .coussin2{
-  animation: apparition 2s 0.6s $courbe forwards;
+  animation: apparition 2s 0.6s $courbe;
 }
 .coussin3{
-  animation: apparition 2s 0.8s $courbe forwards;
+  animation: apparition 2s 0.8s $courbe;
 }
 .coussin4{
-  animation: apparition 2s 1s $courbe forwards;
+  animation: apparition 2s 1s $courbe;
 }
 .none{
   opacity: 0;
