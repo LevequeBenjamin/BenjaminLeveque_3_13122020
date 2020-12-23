@@ -27,6 +27,12 @@
   border-style: none;
   display: none;
 }
+.btnRotation i{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
 .sectionMenu__article a:hover{
   .btnRotation{
   display: block;

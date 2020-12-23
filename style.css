@@ -186,6 +186,13 @@
   display: none;
 }
 
+.btnRotation i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
 .sectionMenu__article a:hover .btnRotation {
   display: block;
   animation: deplacement 0.6s 0s cubic-bezier(0.39, 0.575, 0.28, 0.995);
